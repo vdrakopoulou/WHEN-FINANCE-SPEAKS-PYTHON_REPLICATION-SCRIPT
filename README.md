@@ -38,6 +38,9 @@ Appendix tables A1–A2, B1–B2, C1–C2, D1–D2 (CSV) in /Appendices/
 
 The script also writes brief ANOVA and model summaries as .txt files in /Tables/.
 
+
+
+
 2. Folder structure
 
 Expected structure:
@@ -71,6 +74,9 @@ scipy
 Install (example):
 
 pip install pandas numpy matplotlib statsmodels scipy
+
+
+
 4. How to run
 
 From inside the root folder (e.g., replication_Q1/):
@@ -93,6 +99,9 @@ Save all tables, figures and appendix files into their respective folders.
 
 A short completion message is printed to the console indicating where outputs were written.
 
+
+
+
 5. Outputs (summary)
 
 Tables/
@@ -111,11 +120,15 @@ table6_mixed_model.csv (+ table6_mixed_model_summary.txt)
 
 table7_robustness_checks.csv
 
+
+
 Figures/
 
 figure2_mean_index_by_country.png
 
 figure3_depth_scope_authenticity_by_country.png
+
+
 
 Appendices/
 
@@ -135,11 +148,13 @@ appendix_D1_full_ols_regression.csv
 
 appendix_D2_mixed_effects_parameters.csv
 
+
+
+
 6. Contact
 
 For questions about the replication code or data, please contact:
 
  
-
 Veliota Drakopoulou
-📧 vdrakopoulou@yahoo.com
+📧 vdrakopoulou@yahoo.com or drakopov@erau.edu 
