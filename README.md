@@ -11,7 +11,7 @@ Affiliations:
 ² Embry‑Riddle Aeronautical University
 
 ORCID: 0000‑0002‑1670‑8033
-Correspondence: vdrakopoulou@yahoo.com
+ vdrakopoulou@yahoo.com
 
 GitHub: https://github.com/vdrakopoulou
 
