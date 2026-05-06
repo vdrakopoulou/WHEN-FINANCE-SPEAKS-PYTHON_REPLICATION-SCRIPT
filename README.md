@@ -1,191 +1,151 @@
-# Replication Package
+# Closing or Reproducing the Skills Gap?## Python Integration in Finance Degrees and the University-Industry Interface[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18713524.svg)](https://doi.org/10.5281/zenodo.18713524)**Author:** Veliota Drakopoulou  **Affiliations:** Higher Colleges of Technology; Embry-Riddle Aeronautical University  **ORCID:** https://orcid.org/0000-0002-1670-8033  **Correspondence:** vdrakopoulou@yahoo.com  **GitHub:** https://github.com/vdrakopoulou  **Replication package DOI:** https://doi.org/10.5281/zenodo.18713524---## What this package is aboutFinance increasingly speaks through data, code, and algorithmic models. This replication package asks a simple but consequential question: are finance degrees helping students learn that language, or are they reproducing the skills gap by making computational learning optional, uneven, or invisible?The package accompanies the manuscript **“Closing or Reproducing the Skills Gap? Python Integration in Finance Degrees and the University-Industry Interface.”** It contains the data, code, tables, figures, and documentation needed to reproduce the study’s analysis of Python integration in finance-related university programmes and its comparison with exploratory job-advert skill signals.The study treats Python as more than a programming language. In this project, Python is used as a marker of **algorithmic curriculum capacity**: whether finance students are formally exposed to coding, data analytics, modelling, and authentic finance-specific computational work.---## At a glance| Element | What is included ||---|---|| Curriculum sample | 140 finance-related programmes from 140 universities || Country coverage | 19 countries and jurisdictions || Core measure | Depth-Scope-Authenticity rubric, scored 0 to 4 on each dimension || Main index | Normalized Python Curriculum Index, scaled from 0 to 1 || Job-advert add-on | 190 finance, FinTech, data, risk, and quantitative-role records || Main purpose | Reproduce descriptive statistics, indices, tables, figures, and supplementary alignment outputs || Main caution | The curriculum data measure documented or represented curriculum, not classroom observation |---## What you can reproduceThis package allows readers to reproduce the main empirical backbone of the manuscript:1. Descriptive statistics for Depth, Scope, Authenticity, the raw Python index, and the normalized Python index.2. Country-level and degree-level summaries of documented Python adoption.3. Reliability and factor-structure checks for the Python Curriculum Index.4. Exploratory regression and mixed-model outputs.5. Figures showing cross-national variation and Depth-Scope-Authenticity profiles.6. Supplementary Excel tables for the job-advert and curriculum-alignment analysis.The package is designed for three audiences: reviewers checking reproducibility, researchers adapting the rubric, and curriculum teams interested in mapping computational finance provision.---## How the study worksThe curriculum analysis uses public programme documents such as programme pages, handbooks, course catalogues, regulations, and module descriptors. Each programme is coded using a three-part rubric:| Dimension | What it captures | Low score means | High score means ||---|---|---|---|| Depth | Vertical development of Python across the programme | No Python or only isolated exposure | Python is developed from introductory to advanced levels || Scope | Breadth of Python use across modules and learning contexts | One module, workshop, or narrow activity | Python appears across multiple finance subfields || Authenticity | Realism and assessment of Python use | Demonstrations, toy examples, or no assessed coding | Real data, finance-specific projects, capstones, or industry-facing work |The normalized index is calculated as:```textPython_Index_Normalised = (Depth + Scope + Authenticity) / 12
+The supplementary job-advert analysis then compares these curriculum signals with a purposive sample of employer-facing skill signals from finance, FinTech, data, risk, and quantitative-role adverts. The job-advert data are exploratory. They are useful for triangulation, but they are not a census of all finance vacancies.
 
-## Closing or Reproducing the Skills Gap? Python Integration in Finance Degrees and the University-Industry Interface
+Repository structure
+Replication_When Finance Speaks Python/├── Appendices/│   ├── appendix_A1_sample_by_country.csv│   ├── appendix_A2_sample_by_degree_level.csv│   ├── appendix_B1_rubric_definitions.csv│   ├── appendix_B2_rubric_examples.csv│   ├── appendix_C1_descriptives_key_variables.csv│   ├── appendix_C2_correlation_matrix.csv│   ├── appendix_D1_full_ols_regression.csv│   └── appendix_D2_mixed_effects_parameters.csv├── Code/│   └── replication_analysis.py├── Data/│   ├── Python_in_Finance_Curriculum_scored.csv│   ├── Python_in_Finance_Curriculum_scored.xlsx│   └── JobAdvert/│       └── job_ads_coded_for_table5.csv├── Documentation/│   ├── MANIFEST.md│   └── checksums_sha256.txt├── Figures/│   ├── figure2_mean_index_by_country.png│   └── figure3_depth_scope_authenticity_by_country.png├── Tables/│   ├── Excel/│   │   ├── job_advert_addon_summary_final.xlsx│   │   └── table5_job_advert_curriculum_alignment.xlsx│   ├── table1_normalised_index_by_country.csv│   ├── table2_normalised_index_by_degree_level.csv│   ├── table3_depth_scope_authenticity_by_country.csv│   ├── table4_reliability_factor_structure.csv│   ├── table5_ols_regression.csv│   ├── table6_mixed_model.csv│   └── table7_robustness_checks.csv├── README.md├── README_replication_package.md└── requirements.txt
+File names are more stable than manuscript table numbers. If table numbers change during revision, use the file titles and descriptions rather than numbers alone.
 
-**Author:** Veliota Drakopoulou  
-**Affiliations:** Higher Colleges of Technology; Embry-Riddle Aeronautical University  
-**ORCID:** 0000-0002-1670-8033  
-**Correspondence:** vdrakopoulou@yahoo.com  
-**GitHub:** https://github.com/vdrakopoulou  
-**Replication package DOI:** https://doi.org/10.5281/zenodo.18713524
+Key data files
+Curriculum dataset
+File: Data/Python_in_Finance_Curriculum_scored.csv
+This is the main programme-level dataset. It contains one row per coded finance-related programme.
+Important fields include:
 
-## Overview
 
-This replication package accompanies the manuscript *Closing or Reproducing the Skills Gap? Python Integration in Finance Degrees and the University-Industry Interface*. The study examines how Python is documented in finance-related degree curricula and compares these curriculum signals with an exploratory job-advert skill-signal dataset.
+Country: country or jurisdiction of the programme.
 
-The curriculum dataset covers 140 finance-related programmes offered by 140 universities across 19 countries. Programmes were coded using a Depth-Scope-Authenticity rubric that captures whether Python is absent, mentioned superficially, confined to electives or pathways, or embedded as assessed finance-specific computational learning. The supplementary job-advert dataset contains 190 finance, FinTech, risk, data, and quantitative-role records, with 10 records per country, coded for Python and adjacent computational finance skill signals.
 
-The package is intended to support reproducibility of the manuscript's descriptive statistics, indices, tables, figures, appendices, and supplementary job-advert alignment outputs. The job-advert component is exploratory and should be interpreted as an industry-facing skill signal rather than a representative estimate of all finance vacancies.
+University_Name: university name.
 
-## Suggested Citation
 
-Drakopoulou, V. (2026). *Replication package for Closing or Reproducing the Skills Gap? Python Integration in Finance Degrees and the University-Industry Interface* [Data set and code]. Zenodo. https://doi.org/10.5281/zenodo.18713524
+Program_Name: programme title.
 
-## Repository Structure
 
-```text
-Replication_When Finance Speaks Python/
-├── Appendices/
-├── Code/
-│   └── replication_analysis.py
-├── Data/
-│   ├── Python_in_Finance_Curriculum_scored.csv
-│   ├── Python_in_Finance_Curriculum_scored.xlsx
-│   └── JobAdvert/
-│       └── job_ads_coded_for_table5.csv
-├── Documentation/
-│   ├── MANIFEST.md
-│   └── checksums_sha256.txt
-├── Figures/
-├── Tables/
-│   ├── Excel/
-│   │   ├── job_advert_addon_summary_final.xlsx
-│   │   └── table5_job_advert_curriculum_alignment.xlsx
-│   └── manuscript and model-output CSV/TXT files
-├── README.md
-└── README_replication_package.md
-```
+Degree_Level: degree label or level recorded from documentation.
 
-## Data Files
 
-### Curriculum Data
+Evidence_Type: type of source used for coding.
 
-`Data/Python_in_Finance_Curriculum_scored.csv` is the primary programme-level dataset used to reproduce the curriculum analysis. The Excel version is provided as `Data/Python_in_Finance_Curriculum_scored.xlsx` for inspection.
 
-Key fields include:
+Evidence_URL: public source URL where available.
 
-- `University_ID`: anonymized or structured programme identifier.
-- `Country`: country or jurisdiction of the programme.
-- `University_Name`: university name.
-- `Program_Name`: programme title.
-- `Degree_Level`: degree label or level recorded from documentation.
-- `Academic_Year`: academic year of the coded documentation where available.
-- `Evidence_Type`: type of evidence used, such as programme page, handbook, catalogue, or module descriptor.
-- `Evidence_URL`: source URL where available.
-- `Python_Found`: indicator of whether Python was explicitly documented.
-- `Depth`: rubric score from 0 to 4 for vertical progression of Python use.
-- `Scope`: rubric score from 0 to 4 for breadth of Python use across modules or learning contexts.
-- `Authenticity`: rubric score from 0 to 4 for assessed, finance-specific, realistic Python use.
-- `Python_Index`: summed score, calculated as `Depth + Scope + Authenticity`.
-- `Python_Index_Normalised`: normalized index, calculated as `Python_Index / 12`.
-- `graduate_program`: binary programme-level indicator used for exploratory regression.
-- `Comments`: coder notes summarizing how Python is positioned in the curriculum.
 
-### Supplementary Job-Advert Data
+Python_Found: whether Python was explicitly documented.
 
-`Data/JobAdvert/job_ads_coded_for_table5.csv` contains the exploratory job-advert skill-signal records. The sample includes 190 role records, with 10 records per country. It is purposive and focused on Python-oriented or data-intensive finance, FinTech, analytics, risk, and quantitative roles.
 
-Key fields include:
+Depth: vertical integration score, 0 to 4.
 
-- `job_id`: job-record identifier.
-- `platform`: job platform or source type.
-- `country`: country associated with the advert.
-- `job_title`: role title.
-- `employer_name`: employer name where recorded.
-- `employer_type`: employer classification.
-- `role_family`: role grouping, such as finance, FinTech, data, risk, or quantitative role.
-- `python_flag`, `sql_flag`, `r_flag`: binary indicators for programming-language signals.
-- `ml_ai_flag`, `data_analytics_flag`: binary indicators for machine-learning, AI, or data-analytics signals.
-- `risk_modeling_flag`, `portfolio_flag`, `algo_trading_flag`: binary indicators for finance-specific computational signals.
-- `programming_required_flag`, `programming_preferred_flag`: binary indicators for whether programming is signalled as required or preferred.
-- `ml_data_combined`: combined ML/data indicator.
-- `finance_signal`: combined risk, portfolio, investment analytics, algorithmic trading, or quantitative trading indicator.
-- `job_algorithmic_skill_index`: mean of eight binary skill indicators.
-- `curriculum_index`: corresponding country-level curriculum Python index.
-- `quality_flag`: internal quality or review indicator.
 
-## Tables and Figures
+Scope: horizontal spread score, 0 to 4.
 
-The `Tables/` folder contains generated CSV and TXT outputs from the curriculum analysis, including country summaries, degree-level summaries, reliability/factor-structure outputs, regression outputs, mixed-model outputs, and robustness checks.
 
-The `Tables/Excel/` folder contains the supplementary Excel tables requested for replication:
+Authenticity: assessed, real-world, finance-specific score, 0 to 4.
 
-- `table5_job_advert_curriculum_alignment.xlsx`
-- `job_advert_addon_summary_final.xlsx`
 
-The `Figures/` folder contains generated PNG figures, including mean curriculum Python index by country and Depth-Scope-Authenticity profiles by country.
+Python_Index: Depth + Scope + Authenticity.
 
-The package file names preserve the original generated output names. If the manuscript table numbering changes during revision, use file names and table titles rather than table numbers alone to identify outputs.
 
-## Software Requirements
+Python_Index_Normalised: Python_Index / 12.
 
-The quantitative replication script requires Python 3.9 or later and the following packages:
 
-```text
-pandas
-numpy
-scipy
-statsmodels
-matplotlib
-openpyxl   # optional, useful for inspecting Excel files
-```
+graduate_program: binary indicator used in exploratory modelling.
 
-A minimal installation command is:
 
-```bash
+Comments: coder notes explaining how Python appears in the curriculum.
+
+
+Job-advert skill-signal dataset
+File: Data/JobAdvert/job_ads_coded_for_table5.csv
+This supplementary file contains 190 coded job-advert records, with 10 records per country. It is designed to provide an employer-facing comparator for data-intensive finance roles.
+Important fields include:
+
+
+country: country associated with the advert.
+
+
+job_title: role title.
+
+
+employer_type: employer classification.
+
+
+role_family: finance, FinTech, data, risk, or quantitative role family.
+
+
+python_flag, sql_flag, r_flag: programming-language indicators.
+
+
+ml_ai_flag, data_analytics_flag: ML, AI, or data-analytics indicators.
+
+
+risk_modeling_flag, portfolio_flag, algo_trading_flag: finance-specific computational indicators.
+
+
+programming_required_flag, programming_preferred_flag: required or preferred programming signals.
+
+
+job_algorithmic_skill_index: mean of eight binary skill indicators.
+
+
+curriculum_index: matching country-level curriculum Python index.
+
+
+
+Quick start
+1. Install requirements
+Use Python 3.9 or later.
+pip install -r requirements.txt
+If installing manually:
 pip install pandas numpy scipy statsmodels matplotlib openpyxl
-```
+2. Run the replication script
+From the package root:
+cd "Replication_When Finance Speaks Python"python Code/replication_analysis.py
+The script reads the curriculum dataset and regenerates outputs in:
+Tables/Figures/Appendices/
+Running the script may overwrite generated CSV, TXT, and PNG outputs. The supplementary Excel workbooks in Tables/Excel/ are included for inspection and reporting; they are not regenerated by the main curriculum script.
 
-## Reproducing the Outputs
+Output guide
+OutputLocationPurposeCountry index tableTables/table1_normalised_index_by_country.csvCountry-level curriculum Python indexDegree-level tableTables/table2_normalised_index_by_degree_level.csvPython adoption by degree label or levelDepth-Scope-Authenticity tableTables/table3_depth_scope_authenticity_by_country.csvCountry-level rubric profileReliability and factor structureTables/table4_reliability_factor_structure.csvScale diagnostics for the indexOLS regressionTables/table5_ols_regression.csvExploratory graduate-programme associationMixed modelTables/table6_mixed_model.csvModel including country random interceptRobustness checksTables/table7_robustness_checks.csvAdditional analytic checksJob-advert alignment ExcelTables/Excel/table5_job_advert_curriculum_alignment.xlsxEmployer-facing skill signals and curriculum gapJob-advert summary ExcelTables/Excel/job_advert_addon_summary_final.xlsxSupplementary job-advert summary outputCountry figureFigures/figure2_mean_index_by_country.pngCross-national curriculum index visualizationRubric profile figureFigures/figure3_depth_scope_authenticity_by_country.pngDepth, Scope, Authenticity by country
 
-After extracting the package, run the following commands from the package root:
+Interpretation guardrails
+Please use the package with the same guardrails used in the manuscript.
 
-```bash
-cd "Replication_When Finance Speaks Python"
-python Code/replication_analysis.py
-```
 
-The script reads:
+Documented curriculum is not the same as classroom practice. A programme may use Python in teaching without naming it in public materials.
 
-```text
-Data/Python_in_Finance_Curriculum_scored.csv
-```
 
-and writes reproducible outputs to:
+Low documentation is still meaningful. Public documents shape what students, employers, regulators, and reviewers can see.
 
-```text
-Tables/
-Figures/
-Appendices/
-```
 
-Running the script will overwrite the generated CSV, TXT, and PNG files in those folders. The supplementary job-advert Excel workbooks are included for inspection and alignment reporting; they are not regenerated by the main curriculum replication script.
+The job-advert data are exploratory. They show skill bundles in targeted data-intensive finance roles, not prevalence across all finance jobs.
 
-## Checksums
 
+Country means are not national rankings. Some countries have small programme counts, so country-level values should be interpreted as descriptive signals.
+
+
+Python is a proxy, not the whole computational stack. Programmes may also use R, MATLAB, SQL, C++, Julia, spreadsheets, APIs, cloud tools, or specialist finance platforms.
+
+
+
+Checksums and file integrity
 SHA-256 checksums are provided in:
-
-```text
 Documentation/checksums_sha256.txt
-```
-
-To verify file integrity from the package root on macOS or Linux, run:
-
-```bash
+To verify the package on macOS or Linux:
 shasum -a 256 -c Documentation/checksums_sha256.txt
-```
-
-On systems using GNU coreutils, the equivalent command is:
-
-```bash
+On systems with GNU coreutils:
 sha256sum -c Documentation/checksums_sha256.txt
-```
 
-## Methodological Notes
+Ethics and data use
+This study uses publicly available university programme materials and publicly visible job-advert information. No students, staff, or job applicants were recruited. No individual-level student or staff data are included. The analysis is designed to identify aggregate curriculum and skill-signal patterns, not to rank institutions or evaluate individual competence.
+The replication package is suitable for scholarly review, reproducibility checks, and methodological adaptation. Any reuse should cite the package DOI and respect the original context of the public documents from which the data were coded.
 
-The curriculum analysis is document-based. Public programme documents are treated as evidence of the represented or intended curriculum, not as direct observation of classroom practice. Programmes with no explicit reference to Python in the collected documents are coded as having no documented Python integration, even though Python may still be used informally by instructors.
+Suggested citation
+Drakopoulou, V. (2026). Replication package for Closing or Reproducing the Skills Gap? Python Integration in Finance Degrees and the University-Industry Interface [Data set and code]. Zenodo. https://doi.org/10.5281/zenodo.18713524
 
-The job-advert analysis is supplementary and exploratory. The records were selected to provide an employer-facing comparator for data-intensive finance work. They should not be interpreted as a representative labour-market census or as prevalence estimates for all finance vacancies.
-
-## Ethics and Data Use
-
-The study uses publicly available programme documentation and publicly visible job-advert information. No human participants were recruited, no individual-level student or staff data were collected, and no restricted institutional materials were accessed. The analysis is intended to identify aggregate curriculum and skill-signal patterns rather than to rank individual programmes or institutions.
-
-## Contact
-
-Questions about the replication package may be directed to:
-
-Veliota Drakopoulou  
-vdrakopoulou@yahoo.com  
-ORCID: 0000-0002-1670-8033  
+Contact
+For questions about the dataset, code, or replication package, contact:
+Veliota Drakopoulou
+Email: vdrakopoulou@yahoo.com
+ORCID: https://orcid.org/0000-0002-1670-8033
 GitHub: https://github.com/vdrakopoulou
+
