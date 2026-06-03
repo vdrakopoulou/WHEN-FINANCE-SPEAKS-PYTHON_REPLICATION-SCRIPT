@@ -9,7 +9,7 @@
 **ORCID:** https://orcid.org/0000-0002-1670-8033  
 **Correspondence:** vdrakopoulou@yahoo.com  
 **GitHub:** https://github.com/vdrakopoulou  
-**Replication package DOI:** https://doi.org/10.5281/zenodo.18713524
+**Zenodo Replication package DOI:** https://doi.org/10.5281/zenodo.18713524
 
 ---
 
@@ -17,7 +17,7 @@
 
 Finance increasingly speaks through data, code, and algorithmic models. This replication package asks a simple but consequential question: are finance degrees helping students learn that language, or are they reproducing the skills gap by making computational learning optional, uneven, or invisible?
 
-The package accompanies the manuscript **"Closing or Reproducing the Skills Gap? Python Integration in Finance Degrees and the University-Industry Interface."** It contains the data, code, tables, figures, and documentation needed to reproduce the study's analysis of Python integration in finance-related university programmes and its comparison with exploratory job-advert skill signals.
+The package accompanies the manuscript **"When Finance Speaks Python: Mapping Python Integration in Finance Degrees and the University–Industry Skills Gap ."** It contains the data, code, tables, figures, and documentation needed to reproduce the study's analysis of Python integration in finance-related university programmes and its comparison with exploratory job-advert skill signals.
 
 The study treats Python as more than a programming language. In this project, Python is used as a marker of **algorithmic curriculum capacity**: whether finance students are formally exposed to coding, data analytics, modelling, and authentic finance-specific computational work.
 
