@@ -1,6 +1,5 @@
-# Closing or Reproducing the Skills Gap?
+# When Finance Speaks Python: Mapping Python Integration in Finance Degrees and the University–Industry Skills Gap 
 
-## Python Integration in Finance Degrees and the University-Industry Interface
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18713524.svg)](https://doi.org/10.5281/zenodo.18713524)
 
@@ -263,7 +262,7 @@ The replication package is suitable for scholarly review, reproducibility checks
 
 ## Suggested citation
 
-Drakopoulou, V. (2026). *Replication package for Closing or Reproducing the Skills Gap? Python Integration in Finance Degrees and the University-Industry Interface* [Data set and code]. Zenodo. https://doi.org/10.5281/zenodo.18713524
+Drakopoulou, V. (2026). *Replication package for When Finance Speaks Python: Mapping Python Integration in Finance Degrees and the University–Industry Skills Gap * [Data set and code]. Zenodo. https://doi.org/10.5281/zenodo.18713524
 
 ---
 
